@@ -21,7 +21,8 @@ pnpm start
 
 Script lần lượt hỏi số tiền CAD, tên người gửi, invoice, agreement, reference và email nhận.
 
-- Enter: dùng mặc định (`1667.30`, `JANE DAY SMITH`, `1234A-2`, `1234A`).
+- Enter ở số tiền / tên người gửi: dùng mặc định (`1667.30`, `JANE DAY SMITH`).
+- Enter ở Invoice / Agreement: bỏ trống. Có thể bỏ trống một hoặc cả hai mã.
 - Nhập `-`: bỏ trống trường, hữu ích để test chỉ invoice / chỉ agreement / không có mã.
 - Reference mặc định sinh mới mỗi lần để tránh worker deduplicate.
 - Xác nhận `y` mới gửi, mặc định không gửi.

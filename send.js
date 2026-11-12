@@ -99,8 +99,8 @@ async function main() {
   const amount = await askAmount();
   const name = await ask("Tên người gửi", "JANE DAY SMITH");
   if (!name) throw new Error("Tên người gửi không được trống.");
-  const invoice = (await ask("Invoice", "1234A-2")).replace(/^#+\s*/, "");
-  const agreement = (await ask("Agreement", "1234A")).replace(/^#+\s*/, "");
+  const invoice = (await ask("Invoice (Enter để bỏ trống)")).replace(/^#+\s*/, "");
+  const agreement = (await ask("Agreement (Enter để bỏ trống)")).replace(/^#+\s*/, "");
   const reference = await ask(
     "Reference / X-PaymentKey",
     `TEST-${randomUUID().replaceAll("-", "").slice(0, 12).toUpperCase()}`,

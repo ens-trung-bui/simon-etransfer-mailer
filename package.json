@@ -1,0 +1,13 @@
+{
+  "name": "simon-smtp",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "start": "node send.js",
+    "preview": "node send.js --preview"
+  },
+  "dependencies": {
+    "nodemailer": "^7.0.0"
+  }
+}

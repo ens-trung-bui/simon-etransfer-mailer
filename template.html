@@ -1,0 +1,62 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TEST — e-Transfer notification</title>
+  <style>
+    body { margin:0; background:#eaeced; font-family:'Trebuchet MS',sans-serif; color:#222; }
+    table { border-spacing:0; } p { margin:0; line-height:1.4; }
+    .container { width:600px; max-width:100%; background:#fff; }
+    .inner { padding:32px 72px; }
+    .card { width:100%; border:1px solid #dfdfdf; border-radius:8px; background:#fff; }
+    .label { font-size:14px; color:#404040; padding-bottom:4px; }
+    .value { font-size:16px; overflow-wrap:anywhere; }
+    .grid { width:100%; } .grid td { width:50%; vertical-align:top; padding-top:16px; }
+    @media screen and (max-width:600px) { .inner { padding:24px 32px !important; } }
+  </style>
+</head>
+<body>
+  <table role="presentation" width="100%"><tr><td align="center">
+    <table class="container" role="presentation">
+      <tr><td style="background:#000;padding:12px 32px;">
+        <img src="https://etransfer-notification.interac.ca/images/new/interac_logo.png" alt="INTERAC e-Transfer" height="50">
+      </td></tr>
+      <tr><td style="background:#fff3cd;color:#664d03;padding:12px 32px;font-weight:bold;">
+        TEST FIXTURE — No real funds were transferred. Not an official Interac notification.
+      </td></tr>
+      <tr><td class="inner" style="background:#eee;border-radius:0 0 36px 36px;">
+        <h1 style="font-size:24px;margin:0 0 8px;">Hi STUDENT WORKS PAINTING,</h1>
+        <h2 style="font-size:36px;margin:0 0 8px;">Funds Deposited!</h2>
+        <h3 style="font-size:42px;margin:0 0 8px;">${{amount}}</h3>
+        <p>Your funds have been automatically deposited into your account at <strong>TD Canada Trust</strong>.</p>
+        <table class="card" role="presentation" style="margin-top:32px;"><tr><td style="padding:12px;">
+          <table role="presentation"><tr>
+            <td style="padding-right:12px;"><img width="32" height="32" alt="" src="https://etransfer-content.interac.ca/en/logo_CA000004.png"></td>
+            <td><p>TD Canada Trust</p><p style="font-size:14px;color:#737373;">Account ending in 2729</p></td>
+          </tr></table>
+        </td></tr></table>
+        <table class="card" role="presentation" style="margin-top:24px;"><tr><td style="padding:20px;">
+          <p style="font-weight:bold;margin-bottom:8px;">Transfer Details</p>
+          <p class="label">Message:</p>
+          <p class="large-paragraph" style="font-size:18px;">{{message}}</p>
+          <table class="grid" role="presentation">
+            <tr>
+              <td><p class="label">Date:</p><p class="transfer-grid-item value">{{date}}</p></td>
+              <td><p class="label">Reference Number:</p><p class="transfer-grid-item value">{{reference}}</p></td>
+            </tr>
+            <tr>
+              <td><p class="label">Sent From:</p><p class="transfer-grid-item value">{{name}}</p></td>
+              <td><p class="label">Amount:</p><p class="transfer-grid-item value">${{amount}} (CAD)</p></td>
+            </tr>
+          </table>
+        </td></tr></table>
+      </td></tr>
+      <tr><td class="inner" style="font-size:12px;color:#666;text-align:center;">
+        <p>Simon development fixture for e-Transfer processing. This email does not confirm a payment.</p>
+        <p style="margin-top:16px;">Simulated sender: <strong>{{name}}</strong> at <strong>Simplii Financial</strong>.</p>
+      </td></tr>
+    </table>
+  </td></tr></table>
+</body>
+</html>
